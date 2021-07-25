@@ -15,3 +15,7 @@ node app.js delete --name="task"
 ```bash
 node app.js list
 ```
+### Start the pomodoro timer
+```bash
+node app.js timer
+```
