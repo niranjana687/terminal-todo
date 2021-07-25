@@ -2,6 +2,7 @@ const yargs = require('yargs');
 const chalk = require('chalk');
 const tasks = require('./tasks.js');
 const { describe } = require('yargs');
+const pomodoroEnforcer = require('pomodoro-enforcer');
 
 yargs.version('1.1.0');
 
@@ -50,6 +51,15 @@ yargs.command({
         tasks.listTasks();
     }
 });
+
+//Start the pomodoro timer
+yargs.command({
+    command: 'timer',
+    describe: 'Starts the pomodoro timer',
+    handler: function () {
+        pomodoroEnforcer(25, 5);
+    }
+})
 
 yargs.parse();
 
