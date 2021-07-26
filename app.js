@@ -14,17 +14,12 @@ yargs.command({
         name: {
             describe: 'Name of the task ',
             demandOption: true,
-            type: 'string',
-        },
-        // status: {
-        //     describe: 'Status of the task',
-        //     demandOption: false,
-        //     type: 'string'
-        // },
+            type: 'string'
+        }
     },
     handler: function (argv) {
         tasks.addTask(argv.name);
-    }
+    },
 });
 
 //Deleting a task
@@ -35,7 +30,7 @@ yargs.command({
         name: {
             describe: 'Name of the task',
             demandOption: true,
-            type: 'string',
+            type: 'string'
         }
     },
     handler: function (argv) {
@@ -53,13 +48,13 @@ yargs.command({
 });
 
 //Start the pomodoro timer
-yargs.command({
-    command: 'timer',
-    describe: 'Starts the pomodoro timer',
-    handler: function () {
-        pomodoroEnforcer(25, 5);
-    }
-})
+// yargs.command({
+//     command: 'timer',
+//     describe: 'Starts the pomodoro timer',
+//     handler: function () {
+//         pomodoroEnforcer(25, 5);
+//     }
+// });
 
 yargs.parse();
 
