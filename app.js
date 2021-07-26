@@ -47,14 +47,14 @@ yargs.command({
     }
 });
 
-//Start the pomodoro timer
-// yargs.command({
-//     command: 'timer',
-//     describe: 'Starts the pomodoro timer',
-//     handler: function () {
-//         pomodoroEnforcer(25, 5);
-//     }
-// });
+// Start the pomodoro timer
+yargs.command({
+    command: 'timer',
+    describe: 'Starts the pomodoro timer',
+    handler: function () {
+        pomodoroEnforcer(25, 5);
+    }
+});
 
 yargs.parse();
 
