@@ -2,6 +2,7 @@
 ### Clone the repo
 ```bash
 git clone https://github.com/niranjana687/terminal-todo
+cd terminal-todo
 ```
 ### Add a task
 ```bash
